@@ -1,0 +1,83 @@
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  line-height: 1.6;
+}
+a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+h2 {
+  margin-bottom: 1rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+.profile {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* Sections */
+section {
+  padding: 3rem 2rem;
+}
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.skill-list span {
+  background: #1f1f1f;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+/* Project Cards */
+.project-card {
+  background: #1f1f1f;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #1f1f1f;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .skill-list {
+    flex-direction: column;
+  }
+}
