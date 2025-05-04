@@ -6,89 +6,30 @@
 }
 body {
   font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  background: linear-gradient(to bottom, #0a0a0a, #151515);
-  color: #ffffff;
-  scroll-behavior: smooth;
-}
-header.hero {
-  text-align: center;
-  padding: 3rem 1rem;
-  background: #121212;
-}
-.profile-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 3px solid #00f0ff;
-  object-fit: cover;
-}
-h1 {
-  font-size: 2.5rem;
-  margin: 1rem 0 0.5rem;
+  background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+  color: #fff;
 }
 .card {
+  max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
-  max-width: 800px;
-  background-color: rgba(20, 20, 20, 0.95);
+  background: rgba(30, 30, 30, 0.9);
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
 }
-.tags span {
-  background-color: #00f0ff;
-  color: #000;
-  padding: 0.4rem 0.8rem;
-  margin: 0.3rem;
-  display: inline-block;
-  border-radius: 20px;
-  font-weight: bold;
-  transition: transform 0.3s ease;
-}
-.tags span:hover {
-  transform: scale(1.1);
-  background-color: #00d1d1;
-}
-footer.contact {
-  background-color: #101010;
-  text-align: center;
-  padding: 1.5rem;
-}
-.projects-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-@media (min-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-.project-card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1rem 1.5rem;
-  border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  cursor: pointer;
-}
-.project-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-}
-.typing-text {
+.typing-text,
+.type-title,
+.type-desc {
   white-space: pre-wrap;
-  overflow: hidden;
   border-right: 2px solid #00f0ff;
-  animation: typing 4s steps(40, end), blink 0.7s step-end infinite;
-  max-height: 3.6em;
-}
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+  animation: blink 0.7s step-end infinite;
 }
 @keyframes blink {
   50% { border-color: transparent; }
+}
+.project-card:hover .type-title,
+.project-card:hover .type-desc {
+  animation: none;
 }
 .social-slide {
   position: fixed;
@@ -99,37 +40,30 @@ footer.contact {
   padding: 0.5rem;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
-  transition: width 0.3s ease;
-  overflow: hidden;
-  cursor: pointer;
 }
 .social-slide .label {
   font-weight: bold;
-  color: #000;
+  margin-bottom: 0.5rem;
 }
 .social-slide .icons {
   display: none;
-  margin-top: 1rem;
-}
-.social-slide:hover {
-  width: 160px;
 }
 .social-slide:hover .icons {
   display: block;
 }
-.social-slide a {
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.skill-item {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.skill-item:hover {
+  transform: scale(1.1);
+  background: #00f0ff;
   color: #000;
-  display: block;
-  margin: 0.5rem 0;
-  text-decoration: none;
-  font-weight: bold;
-}
-.typing-slide p {
-  max-height: 4em;
-  overflow: hidden;
-  transition: max-height 0.6s ease-in-out;
-}
-.typing-slide:hover p {
-  max-height: 20em;
-  animation: typing 6s steps(100, end);
 }
