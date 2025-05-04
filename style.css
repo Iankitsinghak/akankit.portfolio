@@ -155,10 +155,12 @@ footer.contact {
 /* Typing Animation */
 .typing-text {
   overflow: hidden;
-  white-space: nowrap;
+  white-space: normal; /* Allow multiline wrapping */
   display: inline-block;
   border-right: 2px solid #00f0ff;
   animation: typing 4s steps(80, end) forwards, blink 0.7s infinite;
+  width: 0;
+  max-width: 100%; /* Prevent overflow */
 }
 @keyframes typing {
   0% {
