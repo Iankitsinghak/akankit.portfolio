@@ -53,11 +53,16 @@ p {
   display: inline-block;
   border-radius: 20px;
   font-weight: bold;
-  transition: background 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
+
 .tags span:hover {
-  background-color: #00d4e0;
+  transform: scale(1.3);
+  box-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff;
+  background-color: #00f0ff;
+  color: #000;
 }
+
 
 /* Java glow effect */
 .tags span:nth-child(3) {
