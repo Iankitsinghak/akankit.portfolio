@@ -1,0 +1,142 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+header.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #11161d;
+}
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #00f0ff;
+  object-fit: cover;
+}
+h1 {
+  font-size: 2.5rem;
+  margin: 1rem 0 0.5rem;
+}
+.card {
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 800px;
+  background-color: rgba(20, 20, 30, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+.card.about {
+  max-height: 120px;
+  overflow: hidden;
+  transition: max-height 0.7s ease;
+}
+.card.about.expanded {
+  max-height: 1000px;
+}
+.tags span {
+  background-color: #00f0ff;
+  color: #000;
+  padding: 0.4rem 0.8rem;
+  margin: 0.3rem;
+  display: inline-block;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.tags span:hover {
+  background-color: #00c7ff;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #00f0ff;
+}
+footer.contact {
+  background-color: #101010;
+  text-align: center;
+  padding: 1rem;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+}
+.socials-sidebar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: #00f0ff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+  z-index: 999;
+  transition: width 0.3s ease;
+  width: 60px;
+}
+.socials-sidebar:hover {
+  width: 180px;
+}
+.socials-sidebar .sidebar-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  padding: 10px 0;
+}
+.socials-sidebar .social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.socials-sidebar:hover .social-icons {
+  opacity: 1;
+}
+.social-icons img {
+  width: 30px;
+  margin: 10px 0;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+.social-icons img:hover {
+  filter: grayscale(0%);
+}
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #00f0ff;
+  color: #000;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1001;
+}
