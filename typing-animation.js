@@ -1,36 +1,13 @@
-
-function typeText(element, text, speed = 20) {
-  let i = 0;
-  element.innerHTML = '';
-  const typing = setInterval(() => {
-    if (i < text.length) {
-      element.innerHTML += text.charAt(i);
-      i++;
-    } else {
-      clearInterval(typing);
-    }
-  }, speed);
-}
-
-const sections = [
-  { id: "about", maxChars: 300 },
-  { id: "projects", maxChars: 0 },
-  { id: "achievements", maxChars: 250 },
-  { id: "academics", maxChars: 250 }
-];
-
-sections.forEach(({ id, maxChars }) => {
-  const section = document.getElementById(id);
-  if (!section) return;
+document.querySelectorAll('[data-type="type"]').forEach(section => {
+  const text = section.querySelector('.typing-text');
+  let animated = false;
 
   section.addEventListener('mouseenter', () => {
-    const p = section.querySelector('p, ul');
-    if (!p) return;
-
-    const originalText = p.textContent || p.innerText;
-    if (originalText.length > maxChars && !p.classList.contains('animated')) {
-      p.classList.add('animated');
-      typeText(p, originalText);
+    if (text && !animated) {
+      text.classList.remove('typing-text');
+      void text.offsetWidth; // Restart animation
+      text.classList.add('typing-text');
+      animated = true;
     }
   });
 });
