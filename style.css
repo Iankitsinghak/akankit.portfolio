@@ -144,24 +144,21 @@ footer.contact {
   font-weight: bold;
 }
 .socials-bar .icons {
-  display: none;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
   flex-direction: column;
   background: #111;
   padding: 1rem;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
 }
+
 .socials-bar:hover .icons {
-  display: flex;
-}
-.socials-bar .icons a {
-  color: #00f0ff;
-  font-size: 1.5rem;
-  margin: 0.5rem 0;
-  transition: transform 0.3s;
-}
-.socials-bar .icons a:hover {
-  transform: scale(1.2);
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
 }
 
 /* Fade-in Animation */
